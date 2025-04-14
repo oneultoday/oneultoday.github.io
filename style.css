@@ -41,32 +41,7 @@ button {
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-}.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
 }
-
-.question-section,
-.input-section {
-    margin-bottom: 20px; /* 두 섹션 사이에 간격을 두기 위해 추가 */
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    margin-top: 10px;
-}
-
 button:hover {
     background-color: #b18b4a;
 }
