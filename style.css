@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Helvetica Neue', sans-serif;
     background-color: #f5f0e6;
@@ -6,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     max-width: 600px;
     margin: 80px auto;
@@ -15,9 +15,11 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-align: center;
 }
+
 h1 {
     color: #7a5e3b;
 }
+
 #question-display {
     margin: 20px 0;
     font-size: 18px;
@@ -26,6 +28,13 @@ h1 {
     background-color: #fff;
     border-radius: 8px;
 }
+
+/* 버튼과 입력창을 다른 칸에 두기 위해 각 섹션에 클래스를 추가 */
+.question-section,
+.input-section {
+    margin-bottom: 20px; /* 두 섹션 사이에 간격을 두기 위해 추가 */
+}
+
 input[type="text"] {
     padding: 10px;
     margin: 10px 5px;
@@ -33,6 +42,7 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 6px;
 }
+
 button {
     background-color: #c8a96a;
     color: white;
@@ -42,6 +52,8 @@ button {
     cursor: pointer;
     font-weight: bold;
 }
+
+/* 버튼의 hover 효과 */
 button:hover {
     background-color: #b18b4a;
 }
