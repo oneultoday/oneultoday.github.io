@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>질문 생성기 - 연결 프로젝트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>질문 생성기</h1>
+        <p>필요하다면 아래 버튼을 눌러 질문을 받아보세요.<br>또는, 아래 입력창에 당신의 질문을 적어 추가할 수도 있어요.</p>
+        <div id="question-display">여기에 질문이 나타납니다.</div>
+        <button onclick="generateQuestion()">질문 생성</button>
+
+        <input type="text" id="custom-question" placeholder="새로운 질문을 입력해 주세요">
+        <button onclick="addQuestion()">질문 추가</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
