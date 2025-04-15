@@ -1,25 +1,25 @@
 
-const questions = [
-    "지금 떠오르는 단어 하나는 무엇인가요?",
-    "오늘 당신이 느낀 감정 중 가장 강했던 것은 무엇이었나요?",
-    "당신이 마지막으로 진심으로 웃었던 순간은 언제인가요?",
-    "당신이 가장 아끼는 기억은 무엇인가요?",
-    "지금 이 순간, 당신의 마음은 어디에 머물러 있나요?"
-];
+const sheetID = "13NzThqi8RiDBpZrLpbr4URlK-Xw823syZGA2IgyasaA";
+const sheetName = "Form Responses 1";
+const url = `https://opensheet.elk.sh/${sheetID}/${sheetName}`;
+
+let questions = [];
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    questions = data.map(entry => entry.question).filter(q => q);
+  })
+  .catch(error => {
+    document.getElementById("question-display").innerText = "질문을 불러올 수 없습니다.";
+    console.error("문제 발생:", error);
+  });
 
 function generateQuestion() {
+    if (questions.length === 0) {
+        document.getElementById("question-display").innerText = "아직 질문이 없습니다.";
+        return;
+    }
     const randomIndex = Math.floor(Math.random() * questions.length);
     document.getElementById("question-display").innerText = questions[randomIndex];
-}
-
-function addQuestion() {
-    const input = document.getElementById("custom-question");
-    const newQuestion = input.value.trim();
-    if (newQuestion) {
-        questions.push(newQuestion);
-        input.value = "";
-        alert("질문이 추가되었어요!");
-    } else {
-        alert("질문을 입력해 주세요.");
-    }
 }
