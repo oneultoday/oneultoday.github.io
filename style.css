@@ -23,6 +23,16 @@ h1 {
     font-weight: bold;
     margin-bottom: 20px;
 }
+.soft-note {
+    font-size: 15px;
+    color: #6e5536;
+    margin-bottom: 10px;
+}
+.status-message {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #4b3e2a;
+}
 #question-display {
     margin: 20px 0;
     font-size: 18px;
@@ -33,10 +43,11 @@ h1 {
 }
 input[type="text"] {
     padding: 10px;
-    margin: 10px 5px;
+    margin: 10px auto;
     width: 80%;
     border: 1px solid #ccc;
     border-radius: 6px;
+    display: block;
 }
 button {
     background-color: #c8a96a;
